@@ -48,7 +48,7 @@ public function getToken(serviceID , access_id, Scope)
 
 	postData = toString(postObject)
 
-	xDate = m_sha1.getUTCTime
+	xDate = getTime()
 	Set winhttp1 = CreateObject("WinHttp.WinHttpRequest.5.1")
 	Call winhttp1.Open("POST", linkhub_ServiceURL + "/" + serviceID + "/Token")
 	Call winhttp1.setRequestHeader("x-lh-date", xdate)
